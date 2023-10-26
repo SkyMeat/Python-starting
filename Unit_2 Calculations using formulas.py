@@ -19,7 +19,18 @@ print((a ** 2 + 10) / (a ** 2 + 1) ** (1 / 2))
 print('2.3.	 Составить программу: \n'
       'а) вычисления значения функции sqrt((2a+sin|3a|)/3.56 при любом значении а; \n'
       'б) вычисления значения функции sin ((3.2+sqrt(1+x))/|5x|)при любом значении х')
-a = float(input('Введите числовое значение "x":'))
-print(math.sqrt((2 * a + math.sin(math.fabs(3 * a))) / 3.56))
-a = float(input('Введите числовое значение "x":'))
+a = float(input('Введите числовое значение "a":'))
+print(math.sqrt((2 * a + (math.sin(math.fabs(3 * a)))) / 3.56))
+x = float(input('Введите числовое значение "x":'))
 print(math.sin((3.2 + math.sqrt(1 + x) / math.fabs(5 * x))))
+
+
+print('2.4.	 Дана сторона квадрата. Найти его периметр.')
+square_side = float(input('Введите длину стороны квадрата:'))
+square_perimeter = 4 * square_side
+print('Периметр квадрата равен :', square_perimeter)
+
+
+print('2.5.	 Дан радиус окружности. Найти ее диаметр.')
+radius_of_round = float(input('Введите радиус круга:'))
+print('Диаметр круга равен :', 2 * radius_of_round)
