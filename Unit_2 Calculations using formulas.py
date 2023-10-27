@@ -1,4 +1,5 @@
 import math
+import cmath
 
 print('2.1.	Составить программу! \n'
       'а)вычисления значения функции y = 17x2– 6x + 13 при любом значении x; \n'
@@ -20,9 +21,17 @@ print('2.3.	 Составить программу: \n'
       'а) вычисления значения функции sqrt((2a+sin|3a|)/3.56 при любом значении а; \n'
       'б) вычисления значения функции sin ((3.2+sqrt(1+x))/|5x|)при любом значении х')
 a = float(input('Введите числовое значение "a":'))
-print(math.sqrt((2 * a + (math.sin(math.fabs(3 * a)))) / 3.56))
+if a >= 0:
+    print(math.sqrt((2 * a + (math.sin(math.fabs(3 * a)))) / 3.56))
+else:
+    print(cmath.sqrt((2 * a + (math.sin(math.fabs(3 * a)))) / 3.56))
+
+
 x = float(input('Введите числовое значение "x":'))
-print(math.sin((3.2 + math.sqrt(1 + x) / math.fabs(5 * x))))
+if x >= 0:
+    print(math.sin((3.2 + math.sqrt(1 + x) / math.fabs(5 * x))))
+else:
+    print(cmath.sin((3.2 + cmath.sqrt(1 + x) / math.fabs(5 * x))))
 
 
 print('2.4.	 Дана сторона квадрата. Найти его периметр.')
@@ -34,3 +43,9 @@ print('Периметр квадрата равен :', square_perimeter)
 print('2.5.	 Дан радиус окружности. Найти ее диаметр.')
 radius_of_round = float(input('Введите радиус круга:'))
 print('Диаметр круга равен :', 2 * radius_of_round)
+
+
+print('2.6.	 Считая, что Земля – идеальная сфера с радиусом R = 6350 км, определить расстояние до линии горизонта \n'
+      'от точки с заданной высотой над Землей.')
+h_under_earth = float(input('Введите значение высоты над землей:'))
+print('Расстояние до линии горизонта :', math.sqrt((6350 + h_under_earth) ** 2 - 6350 ** 2))
