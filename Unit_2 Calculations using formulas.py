@@ -142,11 +142,11 @@ print('Периметр треугольника равен :', triangle_perimet
 
 print('2.17.	 Даны основания и высота равнобедренной трапеции. Найти ее периметр.')
 trapezoid_base_a = float(input('Введите нижнее основание трапеции :'))
-trapezoid_base_b = float(input('Введите верхнее основание трапеции:'))
-trapezoid_height = float(input('Введите высоту трапеции'))
+trapezoid_base_b = float(input('Введите верхнее основание трапеции :'))
+trapezoid_height = float(input('Введите высоту трапеции :'))
 trapezoid_side = math.hypot((trapezoid_base_a - trapezoid_base_b)/2, trapezoid_height)
 trapezoid_perimetr = trapezoid_side * 2 + trapezoid_base_a + trapezoid_base_b
-
+print(' Периметр трапеции равен :', trapezoid_perimetr)
 
 print('2.18.	 Составить программу вычисления значений функций (слишком большая функция)при любых значениях х и y')
 x = float(input('Введите x:'))
@@ -160,8 +160,104 @@ print('Ответ, q =', q)
 
 
 print('2.19.	 Составить программу расчета значения функций (слишком большая функция) при любых значениях a и b.')
+a = float(input('Введите a:'))
+b = float(input('Введите b:'))
+x1 = (2 / (a ** 2 + 25)) + b
+x2 = math.sqrt(b) + ((a + b) / 2)
+x = x1 / x2
+y = (math.fabs(a) + 2 * math.sin(b)) / (5.5 * a)
+print('Ответ, x =', x)
+print('Ответ, y =', y)
 
 
+print('2.20.	 Составить программу расчета значения функций (слишком большая функция) \n'
+      'при любых значениях e, f, g и h.')
+e = float(input('Введите e:'))
+f = float(input('Введите f:'))
+g = float(input('Введите g:'))
+h = float(input('Введите h:'))
+a = math.sqrt(math.fabs(e - (3 / f)) ** 3 + g)
+b = math.sin(e) + math.cos(h) ** 2
+c = (33 * g) / (e * f - 3)
+print('Ответ, a =', a)
+print('Ответ, b =', b)
+print('Ответ, c =', c)
 
 
+print('2.20.	 Составить программу расчета значения функций (слишком большая функция) \n'
+      'при любых значениях e, f, g и h.')
+e = float(input('Введите e:'))
+f = float(input('Введите f:'))
+g = float(input('Введите g:'))
+h = float(input('Введите h:'))
+a = (e + f / 2) / 3
+b = math.fabs(h ** 2 - g)
+c = math.sqrt((g - h) ** 2 - (3 * math.sin(e)))
+print('Ответ, a =', a)
+print('Ответ, b =', b)
+print('Ответ, c =', c)
 
+
+print('2.22.	 Даны два числа. Найти среднее арифметическое и среднее геометрическое их модулей.')
+num_1 = int(input('Введите первое число:'))
+num_2 = int(input('Введите второе число:'))
+average_arithmetic = (math.fabs(num_1) + math.fabs(num_2)) / 2
+average_geometric = (math.fabs(num_1) * math.fabs(num_2)) ** (1./2)
+print('Среднее арифметическое = ', average_arithmetic)
+print('Среднее геометрическое = ', average_geometric)
+
+
+print('2.23.	 Даны стороны прямоугольника. Найти его периметр и длину диагонали.')
+rectangle_side_a = float(input('Введите a:'))
+rectangle_side_b = float(input('Введите b:'))
+rectangle_perimeter = 2 * (rectangle_side_b + rectangle_side_a)
+rectangle_diagonal_length = math.hypot(rectangle_side_b, rectangle_side_a)
+print('Периметр прямоугольника равен :', rectangle_perimeter)
+print('Длина диагонали прямоугольника равна :', rectangle_diagonal_length)
+
+
+print('2.24.	 Даны два числа. Найти их сумму, разность, произведение, а также частное от деления \n'
+      'первого числа на второе.')
+num_1 = float(input('Введите первое число:'))
+num_2 = float(input('Введите второе число:'))
+print('Сумма :', num_1 + num_2)
+print('Разность :', num_1 - num_2)
+print('Произведение :', num_1 * num_2)
+print('Частное :', num_1 / num_2)
+
+
+print('2.25.	 Даны длины сторон прямоугольного параллелепипеда. Найти его объем и площадь боковой поверхности.')
+parallelepiped_side_a = float(input('Введите a:'))
+parallelepiped_side_b = float(input('Введите b:'))
+parallelepiped_side_c = float(input('Введите c:'))
+parallelepiped_volume = parallelepiped_side_b * parallelepiped_side_c * parallelepiped_side_a
+side_surface_area = 2 * (parallelepiped_side_a * parallelepiped_side_c + parallelepiped_side_b * parallelepiped_side_c)
+print('Объем параллелепипеда равен :', parallelepiped_volume)
+print('Площадь боковой поверхности параллелепипеда равна :', side_surface_area)
+
+
+print('2.26.	 Даны координаты на плоскости двух точек. Найти расстояние между этими точками.')
+x_1 = float(input('Введите x точки А :'))
+y_1 = float(input('Введите y точки А:'))
+x_2 = float(input('Введите x точки Б:'))
+y_2 = float(input('Введите y точки Б:'))
+print('Расстояние между точками равно :', math.sqrt((x_2 - x_1) ** 2 + (y_2 - y_1) ** 2))
+
+
+print('2.27.	 Даны основания и высота равнобедренной трапеции. Найти периметр трапеции.')
+trapezoid_base_a = float(input('Введите нижнее основание трапеции :'))
+trapezoid_base_b = float(input('Введите верхнее основание трапеции :'))
+trapezoid_height = float(input('Введите высоту трапеции :'))
+trapezoid_side = math.hypot((trapezoid_base_a - trapezoid_base_b)/2, trapezoid_height)
+trapezoid_perimetr = trapezoid_side * 2 + trapezoid_base_a + trapezoid_base_b
+print(' Периметр трапеции равен :', trapezoid_perimetr)
+
+
+print('2.28.	 Даны основания равнобедренной трапеции и угол при большем основании. Найти площадь трапеции.')
+trapezoid_base_a = float(input('Введите нижнее основание трапеции :'))
+trapezoid_base_b = float(input('Введите верхнее основание трапеции :'))
+trapezoid_angle = float(input('Введите угол при большем основании трапеции :'))
+trapezoid_side = ((trapezoid_base_a - trapezoid_base_b) / 2) / math.cos(trapezoid_angle)
+trapezoid_height = math.sqrt(trapezoid_side ** 2 - ((trapezoid_base_a - trapezoid_base_b) / 2) ** 2)
+trapezoid_area = ((trapezoid_base_a + trapezoid_base_b) / 2) * trapezoid_height
+print('Площадь трапеции равна :', trapezoid_area)
