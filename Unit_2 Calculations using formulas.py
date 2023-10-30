@@ -93,3 +93,75 @@ average_arithmetic = (num_1 + num_2) / 2
 average_geometric = (num_1 * num_2) ** (1./2)
 print('Среднее арифметическое = ', average_arithmetic)
 print('Среднее геометрическое = ', average_geometric)
+
+
+print('2.11.	 Известны объем и масса тела. Определить плотность материала этого тела.')
+body_mass = float(input('Введите массу тела:'))
+body_volume = float(input('Введите объем тела:'))
+body_density = body_volume * body_mass
+print('Искомая плотность материала равна :', body_density)
+
+
+print('2.12.	 Известны количество жителей в государстве и площадь его территории. Определить плотность населения\n'
+      'в этом государстве.')
+num_of_people = float(input('Введите кол-во жителей:'))
+country_area = float(input('Введите площадь страны:'))
+density_of_people = num_of_people / country_area
+print('Плотность населения по заданным данным равна :', density_of_people)
+
+
+print('2.13.	 Составить программу решения линейного уравнения ax + b = 0 (a ≠ 0).')
+a = float(input('Введите a:'))
+b = float(input('Введите b:'))
+if a == 0:
+    print('Введенное значение противоречит условию!')
+else:
+    print('x =', -b / a)
+
+
+print('2.14.	 Даны катеты прямоугольного треугольника. Найти его гипотенузу.')
+a = float(input('Введите катет a:'))
+b = float(input('Введите катет b:'))
+print('Гипотенуза равна :', math.hypot(a, b))
+
+
+print('2.15.	 Найти площадь кольца по заданным внешнему и внутреннему радиусам.')
+inner_radius = float(input('Введите внутренний радиус:'))
+outer_radius = float(input('Введите внешний радиус:'))
+ring_area = math.pi * (outer_radius ** 2 - inner_radius ** 2)
+print('Площадь кольца равна :', ring_area)
+
+
+print('2.16.	 Даны катеты прямоугольного треугольника. Найти его периметр.')
+triangle_leg_a = float(input('Введите катет a:'))
+triangle_leg_b = float(input('Введите катет b:'))
+triangle_hypotenuse = math.hypot(triangle_leg_a, triangle_leg_b)
+triangle_perimeter = triangle_hypotenuse + triangle_leg_a + triangle_leg_b
+print('Периметр треугольника равен :', triangle_perimeter)
+
+
+print('2.17.	 Даны основания и высота равнобедренной трапеции. Найти ее периметр.')
+trapezoid_base_a = float(input('Введите нижнее основание трапеции :'))
+trapezoid_base_b = float(input('Введите верхнее основание трапеции:'))
+trapezoid_height = float(input('Введите высоту трапеции'))
+trapezoid_side = math.hypot((trapezoid_base_a - trapezoid_base_b)/2, trapezoid_height)
+trapezoid_perimetr = trapezoid_side * 2 + trapezoid_base_a + trapezoid_base_b
+
+
+print('2.18.	 Составить программу вычисления значений функций (слишком большая функция)при любых значениях х и y')
+x = float(input('Введите x:'))
+y = float(input('Введите y:'))
+z1 = x + ((2 + y) / x ** 2)
+z2 = y + (1 / (x ** 2 + 10) * (1. / 2))
+z = z1 / z2
+q = 7.25 * math.sin(x) - math.fabs(y)
+print('Ответ, z =', z)
+print('Ответ, q =', q)
+
+
+print('2.19.	 Составить программу расчета значения функций (слишком большая функция) при любых значениях a и b.')
+
+
+
+
+
