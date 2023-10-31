@@ -345,3 +345,54 @@ bc = math.sqrt((x_3 - x_2) ** 2 + (y_3 - y_2) ** 2)
 ac = math.sqrt((x_3 - x_1) ** 2 + (y_3 - y_1) ** 2)
 triangle_perimeter = ab + bc + ac
 print('Периметр треугольника равен :', triangle_perimeter)
+
+print('2.30.	 Выпуклый четырехугольник задан координатами своих вершин. Найти площадь этого четырехугольника \n'
+      'как сумму площадей треугольников.')
+while True:
+    try:
+        x_1 = float(input('Введите x точки A:'))
+        y_1 = float(input('Введите y точки A:'))
+        x_2 = float(input('Введите x точки B:'))
+        y_2 = float(input('Введите y точки B:'))
+        x_3 = float(input('Введите x точки C:'))
+        y_3 = float(input('Введите y точки C:'))
+        x_4 = float(input('Введите x точки D:'))
+        y_4 = float(input('Введите y точки D:'))
+    except ValueError:
+        print('Вы ввели недопустимое значение, повторите ввод!')
+    else:
+        ab = math.sqrt((x_2 - x_1) ** 2 + (y_2 - y_1) ** 2)
+        bc = math.sqrt((x_3 - x_2) ** 2 + (y_3 - y_2) ** 2)
+        cd = math.sqrt((x_4 - x_3) ** 2 + (y_4 - y_3) ** 2)
+        ad = math.sqrt((x_4 - x_1) ** 2 + (y_4 - y_1) ** 2)
+        rectangle_perimeter = ab + bc + cd + ad
+        print('Ответ :', rectangle_perimeter)
+        break
+
+
+print('2.31.	 Известна стоимость 1 кг конфет, печенья и яблок. Найти стоимость всей покупки, \n'
+      'если купили x кг конфет, у кг печенья и z кг яблок.')
+candy_price = float(input('Введите стоймость килограмма конфет :'))
+candy_buy = float(input('Сколько килограмм конфет берем? : '))
+cooke_price = float(input('Введите стоймость килограмма печенья : '))
+cooke_buy = float(input('Сколько килограмм печенья берем? : '))
+apple_price = float(input('Введите стоймость килограмма яблок : '))
+apple_buy = float(input('Сколько килограмм яблок берем? : '))
+total_expend_money = float(candy_price * candy_buy + cooke_price * cooke_buy + apple_price * apple_buy)
+if total_expend_money > 100:
+    print(f'Ну вы и жрете!!! Вы потратили {total_expend_money} гривен!')
+else:
+    print(f'Скромненько! Потрачено всего {total_expend_money} гривен!')
+
+
+print('2.32.	 Известна стоимость монитора, системного блока, клавиатуры и мыши. \n'
+      'Сколько будут стоить 3 компьютера из этих элементов? N компьютеров?')
+monitor_price = float(input('Цена монитора? '))
+sys_block_price = float(input('Цена системника? '))
+keyboard_price = float(input('Цена клавиатуры? '))
+mouse_price = float(input('Цена мышки? '))
+num_of_sets = float(input('Сколько комплектов собираем? '))
+set_price = monitor_price + sys_block_price + keyboard_price + mouse_price
+print(f'Стоймость {num_of_sets} ПК {set_price * num_of_sets} гривен')
+
+
